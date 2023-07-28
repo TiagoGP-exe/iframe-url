@@ -1,5 +1,5 @@
 "use client";
-import { redirect, useSearchParams, useRouter } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 
 interface FormData {
@@ -32,7 +32,7 @@ export default function Home() {
       return;
     }
     clearErrors();
-    push(`/?url=${data.url}`);
+    push(`url/?url=${data.url}`);
   };
 
   if (url) {
